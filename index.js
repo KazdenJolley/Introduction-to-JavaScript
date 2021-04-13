@@ -244,8 +244,10 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(soda){
+        for(let i = soda; i > 0; i = i-1){
+          return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
+        }
   }
 
 
@@ -264,9 +266,23 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(grade){
+  if(90 <= grade && grade <= 100){
+    return 'you got an A';
   }
+  else if(80 <= grade && grade <= 89){
+    return 'you got a B';
+  }
+  else if(70 <= grade && grade <= 79){
+    return 'you got a C';
+  }
+  else if(60 <= grade && grade <= 69){
+    return 'you got a D';
+  }
+  else{
+    return 'you got an F';
+  }
+}
   
   
 
