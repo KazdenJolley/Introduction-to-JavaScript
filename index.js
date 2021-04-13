@@ -34,7 +34,9 @@ Do the following:
 
 let var1 = 12;
 let var2 = 37;
-var1 = var2 - 7;
+if(var1 === var2){
+  var1 = var2 - 7;
+}
 console.log(var1);
 
 
@@ -66,7 +68,7 @@ Do the following:
 function multiply(a, b){
     return a * b;
   }
-  console.log(multiply(12, 12));
+  multiply(12, 12);
 
 
 
@@ -80,9 +82,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
+dogYears(25);
 
 
 
@@ -113,10 +116,37 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if(age >= 1){
+      if(weight < 6){
+        return weight * .05;
+      }
+      else if(weight >= 6 && weight < 11){
+        return weight * .04;
+      }
+      else if(weight >= 11 && weight <=15){
+        return weight * .03;
+      }
+      else{
+        return weight * .02;
+      }
+    }
+    else{
+      if(age >= 1.667 && age < .3334){
+        return weight * .1;
+      }
+      else if( age >= .3334 && age < .583){
+        return weight * .05;
+      }
+      else if( age >= .583){
+        return weight * .04;
+      }
+      else{
+        return "puppy is to young to eat dog food";
+      }
+    }
   }
-
+hungryDog(15, 1);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
