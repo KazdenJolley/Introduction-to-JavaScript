@@ -132,7 +132,7 @@ function hungryDog(weight, age){
       }
     }
     else{
-      if(age >= 1.667 && age < .3334){
+      if(age >= .1667 && age < .3334){
         return weight * .1;
       }
       else if( age >= .3334 && age < .583){
@@ -142,7 +142,7 @@ function hungryDog(weight, age){
         return weight * .04;
       }
       else{
-        return "puppy is to young to eat dog food";
+        return "puppy is too young to eat dog food";
       }
     }
   }
@@ -245,9 +245,9 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(soda){
-        for(let i = soda; i > 0; i = i-1){
-          return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
-        }
+    for(let i = soda; i > 0; i--){
+      return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
+    }
   }
 
 
