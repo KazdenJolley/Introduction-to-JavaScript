@@ -297,10 +297,17 @@ Using the vowelCounter function below do the following:
   HINT - you may need to study tomorrow's content on arrays 
   HINT - try looking up the .includes() method
 */
+let vowelList = ['a', 'e', 'i', 'o', 'u']
 
-
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(stringVar) {
+  let newString = stringVar.toLowerCase();
+  let counter = 0;
+  for(let i = 0; i < newString.length; i++){
+    if (vowelList.includes(newString[i])){
+      counter++;
+    }
+  }
+  return counter;
 }
 
 
